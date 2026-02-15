@@ -37,13 +37,13 @@
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-300 mb-1.5">Email</label>
-                <input type="email" name="email" id="email" value="{{ old('email') }}" required autofocus
+                <input type="email" name="email" id="email" value="{{ old('email', 'admin@pianohaus.com') }}" required autofocus
                        class="w-full bg-ebony-800 border border-gray-600/50 rounded-lg px-4 py-2.5 text-ivory-100 placeholder-gray-500 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 focus:outline-none transition">
             </div>
 
             <div>
                 <label for="password" class="block text-sm font-medium text-gray-300 mb-1.5">Password</label>
-                <input type="password" name="password" id="password" required
+                <input type="password" name="password" id="password" value="password" required
                        class="w-full bg-ebony-800 border border-gray-600/50 rounded-lg px-4 py-2.5 text-ivory-100 placeholder-gray-500 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 focus:outline-none transition">
             </div>
 
@@ -59,7 +59,8 @@
             </button>
 
             <div class="text-center text-xs text-gray-500 pt-2 border-t border-gray-700/30">
-                <p>Demo: admin@pianohaus.com / password</p>
+                <p>Admin: admin@pianohaus.com / password</p>
+                <p>Customer: sarah@example.com / password</p>
             </div>
         </form>
     </div>

@@ -110,7 +110,7 @@ class OrderSeeder extends Seeder
                     'type' => 'purchase',
                     'status' => 'completed',
                     'method' => 'stripe',
-                    'stripe_payment_id' => 'pi_demo_' . strtolower(str_replace('-', '', substr(fake()->uuid(), 0, 13))),
+                    'stripe_payment_id' => 'pi_demo_' . strtolower(str_replace('-', '', substr(\Illuminate\Support\Str::uuid()->toString(), 0, 13))),
                     'paid_at' => $paidAt,
                 ]);
 

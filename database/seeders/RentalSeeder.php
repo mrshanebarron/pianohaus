@@ -106,7 +106,7 @@ class RentalSeeder extends Seeder
                     'type' => 'rental_deposit',
                     'status' => 'completed',
                     'method' => 'stripe',
-                    'stripe_payment_id' => 'pi_dep_' . strtolower(str_replace('-', '', substr(fake()->uuid(), 0, 13))),
+                    'stripe_payment_id' => 'pi_dep_' . strtolower(str_replace('-', '', substr(\Illuminate\Support\Str::uuid()->toString(), 0, 13))),
                     'paid_at' => $startDate->copy()->subDay(),
                 ]);
 
@@ -138,7 +138,7 @@ class RentalSeeder extends Seeder
                         'type' => 'rental_monthly',
                         'status' => 'completed',
                         'method' => 'stripe',
-                        'stripe_payment_id' => 'pi_rnt_' . strtolower(str_replace('-', '', substr(fake()->uuid(), 0, 10))) . '_' . $m,
+                        'stripe_payment_id' => 'pi_rnt_' . strtolower(str_replace('-', '', substr(\Illuminate\Support\Str::uuid()->toString(), 0, 10))) . '_' . $m,
                         'paid_at' => $paymentDate,
                     ]);
 
@@ -165,7 +165,7 @@ class RentalSeeder extends Seeder
                         'type' => 'refund',
                         'status' => 'completed',
                         'method' => 'stripe',
-                        'stripe_payment_id' => 'pi_ref_' . strtolower(str_replace('-', '', substr(fake()->uuid(), 0, 13))),
+                        'stripe_payment_id' => 'pi_ref_' . strtolower(str_replace('-', '', substr(\Illuminate\Support\Str::uuid()->toString(), 0, 13))),
                         'paid_at' => $endDate,
                     ]);
 
